@@ -10,6 +10,8 @@ import androidx.lifecycle.LiveData;
  */
 public interface SplashViewModel {
 
+    void init();
+
     LiveData<User> getSession();
 
 }

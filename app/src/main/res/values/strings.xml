@@ -1,3 +1,40 @@
 <resources>
-    <string name="app_name">TemplateJavaMVVM</string>
+    <!--**************** GENERAL MESSAGES *******************-->
+
+    <!-- Standard actions -->
+    <string name="save">Guardar</string>
+    <string name="cancel">Cancelar</string>
+
+
+
+    <!--**************** UI VALUES *******************-->
+
+    <!-- + Splash -->
+
+
+    <!-- + Login -->
+
+
+    <!-- + Main -->
+
+
+    <!-- + TODO Add all activities -->
+
+
+
+    <!--**************** ERROR MESSAGES *******************-->
+
+    <!-- + General response codes -->
+
+
+    <!-- + Session response codes -->
+
+
+    <!-- + Login response codes -->
+
+
+    <!-- + TODO Add all webservices response codes -->
+
+
+
 </resources>

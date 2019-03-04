@@ -22,7 +22,7 @@ public class SessionRepositoryImpl implements SessionRepository {
     private ApiService apiService;
 
     public SessionRepositoryImpl() {
-        ApiService apiService = ApiGenerator.createService(BuildConfig.BASE_URL);
+        this.apiService = ApiGenerator.createService(BuildConfig.BASE_URL);
     }
 
     @Override

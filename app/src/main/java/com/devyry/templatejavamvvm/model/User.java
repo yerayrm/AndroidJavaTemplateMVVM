@@ -2,11 +2,13 @@ package com.devyry.templatejavamvvm.model;
 
 import com.google.gson.annotations.SerializedName;
 
+import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 /**
  * Created by Yeray Rguez on 04/03/2019.
  */
+@Entity
 public class User {
 
     @PrimaryKey
