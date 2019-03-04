@@ -1,4 +1,4 @@
-package com.devyry.templatejavamvvm.model;
+package com.devyry.templatejavamvvm.model.response;
 
 import com.google.gson.annotations.SerializedName;
 
