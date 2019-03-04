@@ -1,13 +1,10 @@
 package com.devyry.templatejavamvvm.ui.views.splash;
 
 import android.os.Bundle;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
 
-import com.crashlytics.android.Crashlytics;
 import com.devyry.templatejavamvvm.R;
 import com.devyry.templatejavamvvm.ui.base.BaseActivity;
+import com.devyry.templatejavamvvm.utils.Constants;
 
 import androidx.lifecycle.ViewModelProviders;
 import timber.log.Timber;
@@ -25,10 +22,20 @@ public class SplashActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
+        this.initView();
+    }
+
+    private void initView() {
         splashViewModel = ViewModelProviders.of(this).get(SplashViewModelImpl.class);
-        splashViewModel.init();
-        splashViewModel.getSession().observe(this, user -> {
-            Timber.i("Update UI");
+        splashViewModel.getSession().observe(this, action -> {
+            switch (action) {
+                case Constants.GeneralResponseCode.CODE_SUCCESS:
+                    Timber.i("Session success");
+                    break;
+                case Constants.GeneralResponseCode.CODE_ERROR:
+                    Timber.i("Session error");
+                    break;
+            }
         });
     }
 

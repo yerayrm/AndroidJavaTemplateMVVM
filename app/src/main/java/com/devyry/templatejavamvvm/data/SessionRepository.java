@@ -23,6 +23,6 @@ public interface SessionRepository {
 
     void updateUser();
 
-    LiveData<User> getSession();
+    LiveData<String> getSession();
 
 }

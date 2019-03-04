@@ -4,12 +4,10 @@ import android.app.Application;
 
 import com.devyry.templatejavamvvm.data.SessionRepository;
 import com.devyry.templatejavamvvm.data.SessionRepositoryImpl;
-import com.devyry.templatejavamvvm.model.User;
 import com.devyry.templatejavamvvm.ui.base.BaseViewModel;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.LiveData;
-import timber.log.Timber;
 
 /**
  * Created by Yeray Rguez on 04/03/2019.
@@ -17,7 +15,6 @@ import timber.log.Timber;
 public class SplashViewModelImpl extends BaseViewModel implements SplashViewModel {
 
     private SessionRepository sessionRepository;
-    private LiveData<User> user;
 
 
     public SplashViewModelImpl(@NonNull Application application) {
@@ -26,17 +23,8 @@ public class SplashViewModelImpl extends BaseViewModel implements SplashViewMode
     }
 
     @Override
-    public void init() {
-        if (this.user != null) {
-            return;
-        }
-        user = sessionRepository.getSession();
-    }
-
-    @Override
-    public LiveData<User> getSession() {
-        Timber.i("Get session call");
-        return user;
+    public LiveData<String> getSession() {
+        return sessionRepository.getSession();
     }
 
 }

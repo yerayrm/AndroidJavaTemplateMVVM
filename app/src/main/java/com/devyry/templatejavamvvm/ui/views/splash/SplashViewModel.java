@@ -1,8 +1,5 @@
 package com.devyry.templatejavamvvm.ui.views.splash;
 
-
-import com.devyry.templatejavamvvm.model.User;
-
 import androidx.lifecycle.LiveData;
 
 /**
@@ -10,8 +7,6 @@ import androidx.lifecycle.LiveData;
  */
 public interface SplashViewModel {
 
-    void init();
-
-    LiveData<User> getSession();
+    LiveData<String> getSession();
 
 }
