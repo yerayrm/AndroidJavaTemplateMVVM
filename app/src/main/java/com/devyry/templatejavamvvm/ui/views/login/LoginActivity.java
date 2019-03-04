@@ -16,4 +16,9 @@ public class LoginActivity extends BaseActivity {
         setContentView(R.layout.activity_login);
     }
 
+    @Override
+    protected void initView() {
+
+    }
+
 }
