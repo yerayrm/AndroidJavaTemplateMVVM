@@ -21,7 +21,9 @@ public class SplashActivity extends BaseActivity {
         setContentView(R.layout.activity_splash);
 
         splashViewModel = ViewModelProviders.of(this).get(SplashViewModelImpl.class);
-        splashViewModel.getSession();
+        splashViewModel.getSession().observe(this, user -> {
+            // Update UI.
+        });
     }
 
 }

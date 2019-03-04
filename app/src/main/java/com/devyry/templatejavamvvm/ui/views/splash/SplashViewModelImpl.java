@@ -21,8 +21,9 @@ public class SplashViewModelImpl extends BaseViewModel implements SplashViewMode
     }
 
     @Override
-    public void getSession() {
+    public LiveData<User> getSession() {
         Timber.i("Get session call");
+        return user;
     }
 
 }

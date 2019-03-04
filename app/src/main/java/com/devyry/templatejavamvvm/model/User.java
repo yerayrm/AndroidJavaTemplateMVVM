@@ -2,10 +2,16 @@ package com.devyry.templatejavamvvm.model;
 
 import com.google.gson.annotations.SerializedName;
 
+import androidx.room.PrimaryKey;
+
 /**
  * Created by Yeray Rguez on 04/03/2019.
  */
 public class User {
+
+    @PrimaryKey
+    @SerializedName("id")
+    private int id;
 
     @SerializedName("name")
     private String name;
@@ -16,6 +22,14 @@ public class User {
     public User(String name, String mail) {
         this.name = name;
         this.mail = mail;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
