@@ -2,7 +2,10 @@ package com.devyry.templatejavamvvm;
 
 import android.app.Application;
 
+import com.crashlytics.android.Crashlytics;
+
 import androidx.annotation.NonNull;
+import io.fabric.sdk.android.Fabric;
 import timber.log.Timber;
 
 /**
@@ -13,6 +16,9 @@ public class App extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+
+        // Crashlytics reporting
+        Fabric.with(this, new Crashlytics());
 
         // Timber Log initialization
         if (BuildConfig.DEBUG) {
