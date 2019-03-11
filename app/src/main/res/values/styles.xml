@@ -10,11 +10,9 @@
     </style>
 
     <!-- Customize color of navigation drawer icon and back arrow -->
-    <!--
     <style name="ToolbarStyle" parent="@style/ThemeOverlay.AppCompat.ActionBar">
         <item name="colorControlNormal">@color/white</item>
     </style>
-    -->
 
     <!-- Custom buttons -->
     <!--

@@ -1,22 +1,20 @@
 package com.devyry.templatejavamvvm.ui.views.main;
 
 
-import android.os.Bundle;
-
 import com.devyry.templatejavamvvm.R;
-import com.devyry.templatejavamvvm.ui.base.BaseActivity;
+import com.devyry.templatejavamvvm.ui.base.BaseToolbarActivity;
+import com.devyry.templatejavamvvm.utils.enums.ToolbarActions;
 
-public class MainActivity extends BaseActivity {
+public class MainActivity extends BaseToolbarActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    protected void initializeView() {
+        setToolbar(ToolbarActions.NO_ACTION, R.string.app_name);
     }
 
     @Override
-    protected void initView() {
-
+    protected int getLayoutResource() {
+        return R.layout.activity_main;
     }
 
 }

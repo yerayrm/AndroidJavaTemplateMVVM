@@ -1,7 +1,6 @@
 package com.devyry.templatejavamvvm.ui.views.splash;
 
 import android.content.Intent;
-import android.os.Bundle;
 
 import com.devyry.templatejavamvvm.R;
 import com.devyry.templatejavamvvm.ui.base.BaseActivity;
@@ -21,13 +20,8 @@ public class SplashActivity extends BaseActivity {
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash);
-    }
-
-    @Override
-    protected void initView() {
+    protected void initializeView() {
+        // Implement your own methods
         splashViewModel = ViewModelProviders.of(this).get(SplashViewModelImpl.class);
 
         splashViewModel.getSession().observe(this, action -> {
@@ -49,5 +43,11 @@ public class SplashActivity extends BaseActivity {
             }
         });
     }
+
+    @Override
+    protected int getLayoutResource() {
+        return R.layout.activity_splash;
+    }
+
 
 }
